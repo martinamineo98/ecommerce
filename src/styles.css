@@ -1,1 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('./assets/css/minireset.min.css');
+
+/* variables */
+
+:root {
+  --body-background-color: #FFFFFF;
+  --body-font-color: #000000;
+  --body-font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --anchor-active-font-color: #FF0000;
+  --anchor-default-font-color: #000000;
+  --product-list-background-color: hsl(0deg, 0%, 97%);
+  --product-list-info-background-color: #000000;
+  --product-list-info-font-color: #FFFFFF;
+  --scrollbar-thumb-color: #000000;
+  --scrollbar-track-piece-color: #FFFFFF;
+}
+
+/* custom scrollbar */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-piece-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--scrollbar-track-piece-color);
+}
+
+/* change the default box-sizing to border-box */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* change the default font size to 10px */
+
+html,
+body {
+  font-size: 10px;
+}
+
+/* general */
+
+body {
+  font: 1.2rem var(--body-font-family);
+  background-color: var(--body-background-color);
+  color: var(--body-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  color: var(--anchor-default-font-color);
+  text-decoration: none;
+}
+
+a:link {
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--anchor-active-font-color);
+  font-weight: bold;
+}
+
+/* main components */
+/* for the components' children look in the [component-name].component.css files */
+
+app-root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px;
+  width: 100vw;
+}
+
+app-header,
+app-footer {
+  width: 750px;
+  margin: 0 auto;
+}
+
+app-header {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 30px;
+}
+
+app-nav {
+  column-gap: 10px;
+  display: flex;
+}
+
+app-product-list {
+  align-items: center;
+  background-color: var(--product-list-background-color);
+  column-gap: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 30px;
+  row-gap: 15px;
+  width: 100%;
+}
+
+app-footer {
+  padding: 30px;
+  text-align: center;
+}

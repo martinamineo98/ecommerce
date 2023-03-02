@@ -1,4 +1,8 @@
+
 # Ecommerce
+
+Mockup Products photos created by https://unsplash.com/it/@ryanhoffman007
+I simply removed the logos from them.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 

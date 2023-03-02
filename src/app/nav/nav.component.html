@@ -1,0 +1,14 @@
+
+<li *ngFor="let url of urls"><a href="{{ url.url }}">{{ url.name }}</a></li>
+
+<li>
+  <span>categories</span>
+  <ul><li *ngFor="let category of categories"><a (click)="onClickCategory(category.id)">{{ category.name }}</a></li></ul>
+</li>
+
+<li>
+  <span>brands</span>
+  <ul><li *ngFor="let brand of brands"><a (click)="onClickBrand(brand.id)">{{ brand.name }}</a></li></ul>
+</li>
+
+<li class="search"><span>🔎</span></li>

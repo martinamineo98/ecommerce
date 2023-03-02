@@ -1,0 +1,33 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "all categories"
+    },
+    {
+      "id": 1,
+      "name": "clothing"
+    },
+    {
+      "id": 2,
+      "name": "other"
+    }
+  ],
+  "brands": [
+    {
+      "id": 0,
+      "name": "all brands"
+    },
+    {
+      "id": 1,
+      "name": "our brand"
+    },
+    {
+      "id": 2,
+      "name": "other"
+    }
+  ],
+  "colors": [
+    
+  ]
+}

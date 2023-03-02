@@ -1,0 +1,26 @@
+
+li {
+  list-style: none;
+  position: relative;
+}
+
+li:is(:hover, :focus) > ul {
+  display: block;
+  max-height: 200px;
+}
+
+li.search {
+  margin-left: auto;
+}
+
+li:not(.search) span::after {
+  content: '▾';
+  margin-left: 5px;
+}
+
+li > ul {
+  max-height: 0px;
+  min-width: 200px;
+  overflow: hidden;
+  position: absolute;
+}

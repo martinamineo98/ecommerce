@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "short-sleeved t-shirt",
+    "price": 50,
+    "brand": 1,
+    "categories": [1],
+    "colors": [],
+    "sizes": [],
+    "quantity": 15,
+    "image": "/assets/img/short-sleeved-tshirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "long-sleeved t-shirt",
+    "price": 50,
+    "brand": 1,
+    "categories": [1],
+    "colors": [],
+    "sizes": [],
+    "quantity": 0,
+    "image": "/assets/img/long-sleeved-tshirt.jpg"
+  },
+  {
+    "id": 3,
+    "name": "bottle",
+    "price": 25,
+    "brand": 2,
+    "categories": [2],
+    "colors": [],
+    "sizes": [],
+    "quantity": 0,
+    "image": "/assets/img/bottle.jpg"
+  }
+]
