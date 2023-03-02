@@ -1,0 +1,35 @@
+
+  [ ] 01: create a dataset (with different products and categories)
+  
+      create a json for brand, category, color, size
+  
+      id, name, price, description, category, brand, color, size, quantity
+      
+        quantity: 0
+  
+  [ ] 02: add product information (name, price, description)
+  [ ] 03: add simple search function
+  [ ] 04: add product filter
+  [ ] 05: add pagination
+  
+  [ ] 06: add a fake cart
+  [ ] 07: add a fake user and user page
+  
+  
+  
+  
+  
+  a json with the dummy brands, categories, colors and sizes
+  a json with the dummy products
+  
+  a component for the products loop and the pagination (ngx-pagination)
+  
+      nb. this component is going to be reused by the search function
+  
+  a component to visualize a product in its own page
+  
+  a component that filters the products in the loop
+  a component for the 'advanced' (not advanced but ok) search function
+  
+  a component for the fake cart
+  a component for the fake user page
