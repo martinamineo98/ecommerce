@@ -1,10 +1,5 @@
 <div class="products-wrapper">
-  <div class="product" *ngFor="let product of products | paginate: { itemsPerPage: 2, currentPage: p }">
-    <span class="product-name"><a href="#">{{ product.name }}</a></span>
-    <img src="{{ product.image }}" alt="{{ product.name }}">
-    <span class="product-price">€ {{ product.price }}</span>
-    <span class="product-status" *ngIf="product.quantity === 0">sold out</span>
-  </div>
+  <app-product *ngFor="let product of products | paginate: { itemsPerPage: 2, currentPage: p }" [product]="product"></app-product>
 </div>
 
 <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
+
+/* Import .json files */
+
 import productsData from '../assets/json/products.json';
 import data from '../assets/json/data.json';
-import { DataService } from './data.service';
 
 interface Product {
   id: number,

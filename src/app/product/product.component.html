@@ -1,0 +1,8 @@
+<span class="product-name"><a routerLink="/product" (click)="setProduct(product)">{{ product.name }}</a></span>
+<img src="{{ product.image }}" alt="{{ product.name }}">
+<span class="product-price">€ {{ product.price }}</span>
+<span class="product-status" *ngIf="product.quantity === 0">sold out</span>
+
+<div class="product-info" *ngIf="router.url === '/product'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati exercitationem vitae dolores veritatis pariatur culpa illo, earum fuga dicta! Ex consectetur voluptatem ratione facere eligendi natus quod reprehenderit ipsa.
+</div>

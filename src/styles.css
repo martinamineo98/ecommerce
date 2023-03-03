@@ -119,7 +119,18 @@ app-nav {
   display: flex;
 }
 
-app-product-list {
+app-product {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+  row-gap: 15px;
+  text-align: center;
+}
+
+app-product-list,
+app-product-page {
   align-items: center;
   background-color: var(--product-list-background-color);
   display: flex;

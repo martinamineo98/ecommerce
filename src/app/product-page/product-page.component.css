@@ -1,0 +1,9 @@
+
+.product-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row wrap;
+  flex-grow: 1;
+  justify-content: center;
+  overflow-y: auto;
+}

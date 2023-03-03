@@ -1,0 +1,32 @@
+
+img {
+  height: auto;
+  max-width: 250px;
+}
+
+.product-price,
+.product-status {
+  background-color: var(--product-list-info-background-color);
+  color: var(--product-list-info-font-color);
+  font-weight: bold;
+  padding: 0 5px;
+  position: absolute;
+}
+
+.product-price {
+  bottom: 30px;
+  right: 30px;
+}
+
+.product-status {
+  left: 30px;
+  top: 60px;
+}
+
+.product-name::before {
+  content: '( ';
+}
+
+.product-name::after {
+  content: ' )';
+}

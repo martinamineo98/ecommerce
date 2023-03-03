@@ -7,6 +7,9 @@ import { BehaviorSubject } from 'rxjs';
 
 export class DataService {
 
+  private product = new BehaviorSubject<any>('')
+          productObservable = this.product.asObservable()
+
   private products = new BehaviorSubject<any>('')
           productsObservable = this.products.asObservable()
 
@@ -15,6 +18,10 @@ export class DataService {
 
   private brands = new BehaviorSubject<any>('')
           brandsObservable = this.brands.asObservable()
+
+  setProduct(a: any) {
+    this.product.next(a)
+  }
 
   setProducts(a: any) {
     this.products.next(a)
