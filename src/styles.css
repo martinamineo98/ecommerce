@@ -130,6 +130,7 @@ app-product {
   width: 300px;
 }
 
+app-cart,
 app-product-list,
 app-product-page {
   align-items: center;

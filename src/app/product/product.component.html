@@ -17,5 +17,5 @@
     <li *ngFor="let size of availableSizes">{{ size.name }}</li>
   </ul>
 
-  <button class="product-btn-add-to-cart" (click)="addToCart(product)">add to cart</button>
+  <button class="product-btn-add-to-cart" (click)="addToCart(product)" routerLink="/cart">add to cart</button>
 </div>

@@ -33,7 +33,7 @@ export class ProductComponent {
   }
 
   addToCart(product: any) {
-    
+    localStorage.setItem(product.id, '1')
   }
 
   setProduct(product: any) {

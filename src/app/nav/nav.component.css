@@ -33,3 +33,7 @@ li > ul {
   overflow: hidden;
   position: absolute;
 }
+
+.cart a:hover {
+  text-decoration: none;
+}
