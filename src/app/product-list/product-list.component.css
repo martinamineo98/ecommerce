@@ -4,6 +4,15 @@ img {
   max-width: 250px;
 }
 
+.products-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row wrap;
+  flex-grow: 1;
+  justify-content: center;
+  overflow-y: auto;
+}
+
 .product {
   align-self: start;
   display: flex;
@@ -39,4 +48,34 @@ img {
 
 .product-name::after {
   content: ' )';
+}
+
+/* Pagination */
+
+pagination-controls ::ng-deep .ngx-pagination .current {
+  background-color: transparent;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+pagination-controls ::ng-deep .ngx-pagination a:hover {
+  background-color: transparent;
+}
+
+pagination-controls ::ng-deep .ngx-pagination .pagination-previous.disabled::before,
+pagination-controls ::ng-deep .ngx-pagination .pagination-previous:not(.disabled) a::before {
+  content: '< ';
+  margin-right: 15px;
+}
+
+pagination-controls ::ng-deep .ngx-pagination .pagination-next.disabled::after,
+pagination-controls ::ng-deep .ngx-pagination .pagination-next:not(.disabled) a::after {
+  content: ' >';
+  margin-left: 15px;
+}
+
+pagination-controls ::ng-deep .ngx-pagination .pagination-previous:not(.disabled):hover a::before,
+pagination-controls ::ng-deep .ngx-pagination .pagination-next:not(.disabled):hover a::after {
+  text-decoration: underline;
 }

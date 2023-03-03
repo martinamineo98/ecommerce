@@ -1,0 +1,17 @@
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input,
+select {
+  background-color: #FFFFFF;
+  border: 1px solid hsl(0deg, 0%, 95%);
+  border-radius: 5px;
+  font-family: inherit;
+}

@@ -10,7 +10,8 @@ import { DataService } from '../data.service';
 
 export class ProductListComponent {
 
-  products: any
+  p: number = 1
+  products: any[] = []
 
   constructor(
     private dataService: DataService

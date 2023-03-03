@@ -11,4 +11,6 @@
   <ul><li *ngFor="let brand of brands"><a (click)="onClickBrand(brand.id)">{{ brand.name }}</a></li></ul>
 </li>
 
-<li class="search"><span>🔎</span></li>
+<li class="search">
+  <app-search></app-search>
+</li>

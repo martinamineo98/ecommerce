@@ -10,7 +10,15 @@ li:is(:hover, :focus) > ul {
 }
 
 li.search {
+  align-items: center;
+  column-gap: 15px;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
+}
+
+li.search:hover {
+  cursor: pointer;
 }
 
 li:not(.search) span::after {
