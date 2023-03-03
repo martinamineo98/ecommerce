@@ -28,6 +28,43 @@
     }
   ],
   "colors": [
-    
+    {
+      "id": 0,
+      "name": "black"
+    },
+    {
+      "id": 1,
+      "name": "white"
+    },
+    {
+      "id": 2,
+      "name": "grey"
+    }
+  ],
+  "sizes": [
+    {
+      "id": 0,
+      "name": "one-size-fit-all"
+    },
+    {
+      "id": 1,
+      "name": "xs"
+    },
+    {
+      "id": 2,
+      "name": "s"
+    },
+    {
+      "id": 3,
+      "name": "m"
+    },
+    {
+      "id": 4,
+      "name": "l"
+    },
+    {
+      "id": 5,
+      "name": "xl"
+    }
   ]
 }

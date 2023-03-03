@@ -9,6 +9,7 @@ import data from '../assets/json/data.json';
 interface Product {
   id: number,
   name: string,
+  description: string,
   price: number,
   brand: number,
   categories: any[],
@@ -30,6 +31,8 @@ export class AppComponent {
   products: Product[] = productsData
   categories = data.categories
   brands = data.brands
+  colors = data.colors
+  sizes = data.sizes
 
   constructor(
     private dataService: DataService
@@ -39,6 +42,8 @@ export class AppComponent {
     this.setProducts(this.products)
     this.setCategories(this.categories)
     this.setBrands(this.brands)
+    this.setColors(this.colors)
+    this.setSizes(this.sizes)
   }
 
   setProducts(a: any) {
@@ -51,6 +56,14 @@ export class AppComponent {
 
   setBrands(a: any) {
     this.dataService.setBrands(a)
+  }
+
+  setColors(a: any) {
+    this.dataService.setColors(a)
+  }
+
+  setSizes(a: any) {
+    this.dataService.setSizes(a)
   }
 
   filterProductsByCategory(id: number) {

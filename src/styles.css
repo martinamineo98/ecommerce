@@ -127,6 +127,7 @@ app-product {
   position: relative;
   row-gap: 15px;
   text-align: center;
+  width: 300px;
 }
 
 app-product-list,

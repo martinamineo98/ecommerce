@@ -2,33 +2,36 @@
   {
     "id": 1,
     "name": "short-sleeved t-shirt",
+    "description": "a logoless short-sleeved t-shirt",
     "price": 50,
     "brand": 1,
     "categories": [1],
-    "colors": [],
-    "sizes": [],
+    "colors": [0, 1],
+    "sizes": [1, 2, 3, 4, 5],
     "quantity": 15,
     "image": "/assets/img/short-sleeved-tshirt.jpg"
   },
   {
     "id": 2,
     "name": "long-sleeved t-shirt",
+    "description": "a logoless long-sleeved t-shirt",
     "price": 50,
     "brand": 1,
     "categories": [1],
-    "colors": [],
-    "sizes": [],
+    "colors": [0, 1, 2],
+    "sizes": [1, 2, 3, 4, 5],
     "quantity": 0,
     "image": "/assets/img/long-sleeved-tshirt.jpg"
   },
   {
     "id": 3,
     "name": "bottle",
+    "description": "a logoless bottle",
     "price": 25,
     "brand": 2,
     "categories": [2],
-    "colors": [],
-    "sizes": [],
+    "colors": [0, 1, 2],
+    "sizes": [0],
     "quantity": 0,
     "image": "/assets/img/bottle.jpg"
   }

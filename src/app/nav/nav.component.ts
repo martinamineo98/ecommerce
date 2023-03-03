@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { AppComponent } from '../app.component';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-nav',
@@ -20,7 +22,8 @@ export class NavComponent {
 
   constructor(
     private dataService: DataService,
-    private appComponent: AppComponent
+    private appComponent: AppComponent,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -45,6 +48,8 @@ export class NavComponent {
   }
 
   onClickCategory(id: number) {
+    this.importData()
+
     if (id === 0) {
       this.appComponent.resetProducts()
     } else {
@@ -53,6 +58,8 @@ export class NavComponent {
   }
 
   onClickBrand(id: number) {
+    this.importData()
+
     if (id === 0) {
       this.appComponent.resetProducts()
     } else {

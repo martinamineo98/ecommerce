@@ -1,7 +1,17 @@
 
 img {
   height: auto;
-  max-width: 250px;
+  width: 250px;
+}
+
+.product-info-main {
+  position: relative;
+}
+
+.product-info-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .product-price,
@@ -14,13 +24,13 @@ img {
 }
 
 .product-price {
-  bottom: 30px;
-  right: 30px;
+  bottom: 10px;
+  right: 20px;
 }
 
 .product-status {
-  left: 30px;
-  top: 60px;
+  left: 20px;
+  top: 10px;
 }
 
 .product-name::before {
@@ -29,4 +39,42 @@ img {
 
 .product-name::after {
   content: ' )';
+}
+
+.product-colors,
+.product-sizes {
+  column-gap: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+:is(.product-colors, .product-sizes) :is(li, span) {
+  padding: 2px 5px;
+}
+
+:is(.product-colors, .product-sizes) li {
+  background-color: #FFFFFF;
+}
+
+:is(.product-colors, .product-sizes) span {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+:is(:is(.product-colors, .product-sizes) li, .product-btn-add-to-cart) {
+  transition: all .5s ease-in-out;
+}
+
+:is(:is(.product-colors, .product-sizes) li, .product-btn-add-to-cart):hover {
+  filter: invert(100%);
+}
+
+.product-btn-add-to-cart {
+  background-color: #000000;
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 15px;
 }

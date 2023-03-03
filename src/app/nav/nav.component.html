@@ -3,14 +3,19 @@
 
 <li>
   <span>categories</span>
-  <ul><li *ngFor="let category of categories"><a (click)="onClickCategory(category.id)">{{ category.name }}</a></li></ul>
+  <ul><li *ngFor="let category of categories"><a (click)="onClickCategory(category.id)" routerLink="/">{{ category.name }}</a></li></ul>
 </li>
 
 <li>
   <span>brands</span>
-  <ul><li *ngFor="let brand of brands"><a (click)="onClickBrand(brand.id)">{{ brand.name }}</a></li></ul>
+  <ul><li *ngFor="let brand of brands"><a (click)="onClickBrand(brand.id)" routerLink="/">{{ brand.name }}</a></li></ul>
 </li>
 
 <li class="search">
   <app-search></app-search>
+</li>
+
+<li class="cart">
+  <!-- TODO: add fake cart -->
+  🛒
 </li>

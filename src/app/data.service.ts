@@ -19,6 +19,12 @@ export class DataService {
   private brands = new BehaviorSubject<any>('')
           brandsObservable = this.brands.asObservable()
 
+  private colors = new BehaviorSubject<any>('')
+          colorsObservable = this.colors.asObservable()
+
+  private sizes = new BehaviorSubject<any>('')
+          sizesObservable = this.sizes.asObservable()
+
   setProduct(a: any) {
     this.product.next(a)
   }
@@ -33,6 +39,14 @@ export class DataService {
 
   setBrands(a: any) {
     this.brands.next(a)
+  }
+
+  setColors(a: any) {
+    this.colors.next(a)
+  }
+
+  setSizes(a: any) {
+    this.sizes.next(a)
   }
 
 }
