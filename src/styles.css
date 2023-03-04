@@ -86,6 +86,22 @@ a:active {
   font-weight: bold;
 }
 
+form,
+button,
+input,
+select,
+option {
+  font: inherit;
+}
+
+button {
+  transition: all .5s ease-in-out;
+}
+
+button:hover {
+  filter: invert(100%);
+}
+
 /* main components */
 /* for the components' children look in the [component-name].component.css files */
 
@@ -138,9 +154,14 @@ app-product-page {
   display: flex;
   flex-flow: column wrap;
   flex-grow: 1;
-  justify-content: center;
+  overflow: auto;
   padding: 30px;
   width: 100%;
+}
+
+app-product-list,
+app-product-page {
+  justify-content: center;
 }
 
 app-footer {

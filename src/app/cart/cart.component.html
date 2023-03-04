@@ -1,6 +1,26 @@
-<ul>
-  <li *ngFor="let product of products">
-    {{ product.quantity }}
-    {{ product.info.name }}
-  </li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>product</th>
+      <th>product name</th>
+      <th>quantity</th>
+      <th>remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th><img src="{{ product.info.image }}" alt="{{ product.info.name }}"></th>
+      <th><a routerLink="/product" (click)="setProduct(product.info)">{{ product.info.name }}</a></th>
+      <th>
+        <div class="product-quantity">
+          <span>{{ product.quantity }}</span>
+          <div class="product-quantity-buttons">
+            <button class="product-btn-quantity" (click)="changeQuantity(product.info.id, product.quantity + 1)">+</button>
+            <button class="product-btn-quantity" (click)="changeQuantity(product.info.id, product.quantity - 1)" *ngIf="product.quantity > 1">-</button>
+          </div>
+        </div>
+      </th>
+      <th><button class="product-btn-remove" (click)="removeProduct(product.id)">remove</button></th>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,42 @@
+
+img {
+  height: auto;
+  width: 50px;
+}
+
+table {
+  background-color: #FFFFFF;
+  width: 750px;
+}
+
+thead th {
+  background-color: #FFFFFF;
+  padding: 5px;
+}
+
+.product-quantity {
+  align-items: center;
+  column-gap: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-quantity-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.product-btn-quantity {
+  height: 18px;
+  width: 18px;
+}
+
+.product-btn-quantity,
+.product-btn-remove {
+  background-color: #000000;
+  border: 0;
+  color: #FFFFFF;
+}
