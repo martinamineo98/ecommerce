@@ -70,11 +70,15 @@ img {
   filter: invert(100%);
 }
 
+.product-sold-out,
 .product-btn-add-to-cart {
   background-color: #000000;
   border: 0;
   color: #FFFFFF;
-  cursor: pointer;
   font-family: inherit;
   padding: 15px;
+}
+
+.product-btn-add-to-cart {
+  cursor: pointer;
 }

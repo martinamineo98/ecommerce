@@ -32,8 +32,12 @@ export class ProductComponent {
     this.availableSizes = this.getProductSizes()
   }
 
-  addToCart(product: any) {
-    localStorage.setItem(product.id, '1')
+  addToCart(id: any) {
+    if (localStorage.getItem(id) === null) {
+      localStorage.setItem(id, '1')
+    }
+
+    this.router.navigate(['/cart'])
   }
 
   setProduct(product: any) {

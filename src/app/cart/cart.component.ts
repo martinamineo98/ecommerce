@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -13,24 +14,27 @@ export class CartComponent {
   products: any
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    public router: Router
   ) {}
 
   ngOnInit() {
     this.dataService.productsObservable.subscribe((products) => this.allProducts = products)
     this.retrieveProducts()
-    console.log(this.products)
   }
+
+/*   reloadComponent() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false
+    this.router.onSameUrlNavigation = 'reload'
+    this.router.navigate(['/cart'])
+  } */
 
   retrieveProducts() {
     let local = { ... localStorage }
     let products = []
 
     for (let [k, v] of Object.entries(local)) {
-      products.push({
-        quantity: parseFloat(v),
-        info: this.getCorrectProduct(parseFloat(k))
-      })
+      products.push({ quantity: v, info: this.getCorrectProduct(parseFloat(k)) })
     }
 
     this.products = products
