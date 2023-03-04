@@ -34,15 +34,15 @@ export class CartComponent {
     let products = []
 
     for (let [k, v] of Object.entries(local)) {
-      products.push({ quantity: v, info: this.getCorrectProduct(parseFloat(k)) })
+      products.push({ quantity: parseFloat(v), info: this.getCorrectProduct(Number(k)) })
     }
 
     this.products = products
   }
 
-  getCorrectProduct(id: number) {
+  getCorrectProduct(id: any) {
     return this.allProducts.find((product: any) => {
-      return product.id === id
+      return product.id === parseFloat(id)
     })
   }
 
