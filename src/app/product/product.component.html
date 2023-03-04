@@ -6,17 +6,20 @@
   <span class="product-status" *ngIf="product.quantity === 0">sold out</span>
 </div>
 
-<div class="product-info-page" *ngIf="router.url === '/product'">
+<div class="product-info-page" *ngIf="router.url === '/product'" [formGroup]="productDetails">
   <span class="product-description">{{ product.description }}</span>
 
   <ul class="product-colors">
     <span>colors:</span>
-    <li *ngFor="let color of availableColors">{{ color.name }}</li>
+    <!-- <li *ngFor="let color of availableColors">{{ color.name }}</li> -->
+    <select formControlName="chosenColor">
+      <option *ngFor="let color of availableColors" value="{{ color.name }}">{{ color.name }}</option>
+    </select>
   </ul>
-  <ul class="product-sizes" [formGroup]="productDetails">
+  <ul class="product-sizes">
     <span>sizes:</span>
     <select formControlName="chosenSize">
-      <option *ngFor="let size of availableSizes; index as i" value="{{ size.name }}">{{ size.name }}</option>
+      <option *ngFor="let size of availableSizes" value="{{ size.name }}">{{ size.name }}</option>
     </select>
   </ul>
 

@@ -22,7 +22,8 @@ export class ProductComponent {
   availableSizes: any
 
   productDetails = new FormGroup({
-    chosenSize: new FormControl('')
+    chosenSize: new FormControl(''),
+    chosenColor: new FormControl('')
   })
 
   constructor(
@@ -39,7 +40,7 @@ export class ProductComponent {
 
   addToCart(id: any) {
     if (localStorage.getItem(id) === null) {
-      localStorage.setItem(id, `1,${this.productDetails.value.chosenSize}`)
+      localStorage.setItem(id, `1,${this.productDetails.value.chosenSize},${this.productDetails.value.chosenColor}`)
     }
 
     this.router.navigate(['/cart'])

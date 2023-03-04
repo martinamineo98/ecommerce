@@ -57,7 +57,7 @@ select {
   padding: 2px 5px;
 }
 
-:is(.product-colors li, .product-sizes select) {
+:is(.product-colors li, select) {
   background-color: #FFFFFF;
 }
 
