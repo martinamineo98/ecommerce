@@ -30,7 +30,7 @@
     "price": 25,
     "brand": 2,
     "categories": [2],
-    "colors": [0, 1, 2],
+    "colors": [0, 2],
     "sizes": [0],
     "quantity": 0,
     "image": "/assets/img/bottle.jpg"
