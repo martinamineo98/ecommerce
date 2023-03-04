@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { DataService } from '../data.service';
 
@@ -20,6 +21,10 @@ export class ProductComponent {
   availableColors: any
   availableSizes: any
 
+  productDetails = new FormGroup({
+    chosenSize: new FormControl('')
+  })
+
   constructor(
     private dataService: DataService,
     public router: Router
@@ -34,7 +39,7 @@ export class ProductComponent {
 
   addToCart(id: any) {
     if (localStorage.getItem(id) === null) {
-      localStorage.setItem(id, '1')
+      localStorage.setItem(id, `1,${this.productDetails.value.chosenSize}`)
     }
 
     this.router.navigate(['/cart'])

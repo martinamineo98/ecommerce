@@ -20,8 +20,18 @@ export class CartComponent {
 
   ngOnInit() {
     this.dataService.productsObservable.subscribe((products) => this.allProducts = products)
-    this.retrieveProducts()
+    // this.retrieveProducts()
   }
+
+  retrieveProducts() {
+    let products = []
+
+    for (let [k, v] of Object.entries({ ... localStorage })) {
+      console.log(`${k}: ${v}`)
+    }
+  }
+
+  /*
 
   retrieveProducts() {
     let local = { ... localStorage }
@@ -53,5 +63,7 @@ export class CartComponent {
     localStorage.removeItem(id)
     this.retrieveProducts()
   }
+
+  */
 
 }

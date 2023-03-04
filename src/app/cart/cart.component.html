@@ -1,3 +1,4 @@
+<!--
 <table>
   <thead>
     <tr>
@@ -21,6 +22,24 @@
         </div>
       </th>
       <th><button class="product-btn-remove" (click)="removeProduct(product.info.id)">remove</button></th>
+    </tr>
+  </tbody>
+</table>
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th>product</th>
+      <th>product name</th>
+      <th>quantity</th>
+      <th>remove</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products">
+      
     </tr>
   </tbody>
 </table>

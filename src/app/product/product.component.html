@@ -13,9 +13,11 @@
     <span>colors:</span>
     <li *ngFor="let color of availableColors">{{ color.name }}</li>
   </ul>
-  <ul class="product-sizes">
+  <ul class="product-sizes" [formGroup]="productDetails">
     <span>sizes:</span>
-    <li *ngFor="let size of availableSizes">{{ size.name }}</li>
+    <select formControlName="chosenSize">
+      <option *ngFor="let size of availableSizes; index as i" value="{{ size.name }}">{{ size.name }}</option>
+    </select>
   </ul>
 
   <button *ngIf="product.quantity > 0" class="product-btn-add-to-cart" (click)="addToCart(product.id)">add to cart</button>

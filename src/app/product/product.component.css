@@ -4,6 +4,10 @@ img {
   width: 250px;
 }
 
+select {
+  border: 0;
+}
+
 .product-info-main {
   position: relative;
 }
@@ -48,11 +52,12 @@ img {
   flex-direction: row;
 }
 
-:is(.product-colors, .product-sizes) :is(li, span) {
+:is(.product-colors, .product-sizes) span,
+.product-colors li {
   padding: 2px 5px;
 }
 
-:is(.product-colors, .product-sizes) li {
+:is(.product-colors li, .product-sizes select) {
   background-color: #FFFFFF;
 }
 
