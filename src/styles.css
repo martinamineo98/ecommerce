@@ -146,6 +146,7 @@ app-product {
   width: 300px;
 }
 
+app-user,
 app-cart,
 app-product-list,
 app-product-page {
@@ -159,6 +160,7 @@ app-product-page {
   width: 100%;
 }
 
+app-user,
 app-product-list,
 app-product-page {
   justify-content: center;
