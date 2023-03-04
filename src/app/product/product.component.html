@@ -8,6 +8,7 @@
 
 <div class="product-info-page" *ngIf="router.url === '/product'">
   <span class="product-description">{{ product.description }}</span>
+
   <ul class="product-colors">
     <span>colors:</span>
     <li *ngFor="let color of availableColors">{{ color.name }}</li>

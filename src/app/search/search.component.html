@@ -1,9 +1,9 @@
-<form id="search">
-  <select>
-    <option value="title">title</option>
+<form id="search" [formGroup]="form">
+  <select formControlName="cat">
+    <option value="name">name</option>
     <option value="category">category</option>
     <option value="brand">brand</option>
   </select>
-  <input>
+  <input formControlName="str">
   <button type="submit" (click)="search($event)">🔎</button>
 </form>

@@ -49,4 +49,8 @@ export class DataService {
     this.sizes.next(a)
   }
 
+  resetProducts() {
+    
+  }
+
 }
