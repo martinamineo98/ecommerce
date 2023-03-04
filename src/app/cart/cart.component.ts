@@ -23,12 +23,6 @@ export class CartComponent {
     this.retrieveProducts()
   }
 
-/*   reloadComponent() {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false
-    this.router.onSameUrlNavigation = 'reload'
-    this.router.navigate(['/cart'])
-  } */
-
   retrieveProducts() {
     let local = { ... localStorage }
     let products = []
