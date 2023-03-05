@@ -87,3 +87,17 @@ select {
 .product-btn-add-to-cart {
   cursor: pointer;
 }
+
+.toSelect {
+  padding: 0;
+  transition: all .5s ease-in-out;
+}
+
+.isRequired {
+  background-color: #FF0000;
+  padding: 5px;
+}
+
+.isRequired::after {
+  content: 'is required'
+}

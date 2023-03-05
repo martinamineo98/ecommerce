@@ -9,15 +9,16 @@
 <div class="product-info-page" *ngIf="router.url === '/product'" [formGroup]="productDetails">
   <span class="product-description">{{ product.description }}</span>
 
-  <ul class="product-colors">
+  <ul class="product-colors toSelect">
     <span>colors:</span>
-    <select formControlName="chosenColor">
+    <select formControlName="chosenColor" ng-required="true">
       <option *ngFor="let color of availableColors; let index = index" value="{{ color.name }}" (click)="onClick(index)">{{ color.name }}</option>
     </select>
   </ul>
-  <ul class="product-sizes">
+
+  <ul class="product-sizes toSelect">
     <span>sizes:</span>
-    <select formControlName="chosenSize">
+    <select formControlName="chosenSize" ng-required="true">
       <option *ngFor="let size of availableSizes" value="{{ size.name }}">{{ size.name }}</option>
     </select>
   </ul>

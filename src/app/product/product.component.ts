@@ -45,8 +45,32 @@ export class ProductComponent {
   }
 
   addToCart(id: any) {
-    if (localStorage.getItem(id) === null) {
-      localStorage.setItem(id, `1,${this.productDetails.value.chosenSize},${this.productDetails.value.chosenColor}`)
+
+    const options = Array.from(document.querySelectorAll('.toSelect'))
+    
+    if ( this.productDetails.value.chosenColor === '' || this.productDetails.value.chosenSize === '' ) {
+      options.map((item) => item.classList.add('isRequired'))
+
+      // remove class after 5 seconds
+
+      setTimeout(() => {
+        options.map((item) => item.classList.remove('isRequired'))
+      }, 5000)
+
+      return
+    }
+
+    const obj = {
+      id: this.product.id,
+      size: this.productDetails.value.chosenSize,
+      color: this.productDetails.value.chosenColor,
+      quantity: 1
+    }
+
+    const identification = `${this.product.name}__${obj.size}__${obj.color}`
+
+    if (!localStorage.getItem(identification)) {
+      localStorage.setItem(identification, JSON.stringify(obj))
     }
 
     this.product.image = this.product.all_images[0]
