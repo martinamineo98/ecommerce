@@ -20,8 +20,10 @@ export class CartComponent {
 
   ngOnInit() {
     this.dataService.productsObservable.subscribe((products) => this.allProducts = products)
-    this.retrieveProducts()
+    // this.retrieveProducts()
   }
+
+  /*
 
   retrieveProducts() {
     let products = []
@@ -60,5 +62,7 @@ export class CartComponent {
     localStorage.removeItem(id)
     this.retrieveProducts()
   }
+
+  */
 
 }
