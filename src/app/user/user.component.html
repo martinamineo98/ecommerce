@@ -1,0 +1,7 @@
+<nav class="user-nav">
+  <a *ngFor="let element of nav" (click)="changeContent(element.content)">{{ element.str }}</a>
+</nav>
+
+<div class="user-content">
+  {{ content }}
+</div>
