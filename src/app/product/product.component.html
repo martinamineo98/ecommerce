@@ -11,9 +11,8 @@
 
   <ul class="product-colors">
     <span>colors:</span>
-    <!-- <li *ngFor="let color of availableColors">{{ color.name }}</li> -->
     <select formControlName="chosenColor">
-      <option *ngFor="let color of availableColors" value="{{ color.name }}">{{ color.name }}</option>
+      <option *ngFor="let color of availableColors; let index = index" value="{{ color.name }}" (click)="onClick(index)">{{ color.name }}</option>
     </select>
   </ul>
   <ul class="product-sizes">

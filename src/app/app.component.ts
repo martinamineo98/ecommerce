@@ -16,7 +16,8 @@ interface Product {
   colors: any[],
   sizes: any[],
   quantity: number,
-  image: string
+  image: string,
+  all_images: any[]
 }
 
 @Component({

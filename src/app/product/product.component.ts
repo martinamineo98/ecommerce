@@ -21,6 +21,8 @@ export class ProductComponent {
   availableColors: any
   availableSizes: any
 
+  availableImages: any
+
   productDetails = new FormGroup({
     chosenSize: new FormControl(''),
     chosenColor: new FormControl('')
@@ -38,11 +40,16 @@ export class ProductComponent {
     this.availableSizes = this.getProductSizes()
   }
 
+  onClick(index: any) {
+    this.product.image = this.product.all_images[index]
+  }
+
   addToCart(id: any) {
     if (localStorage.getItem(id) === null) {
       localStorage.setItem(id, `1,${this.productDetails.value.chosenSize},${this.productDetails.value.chosenColor}`)
     }
 
+    this.product.image = this.product.all_images[0]
     this.router.navigate(['/cart'])
   }
 
