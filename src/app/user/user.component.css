@@ -1,7 +1,29 @@
 
+.user-nav,
+.user-content {
+  height: 100%;
+}
+
+.user-nav {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.user-nav a {
+  background-color: #FFFFFF;
+  padding: 15px;
+}
+
 .user-nav a.current {
   font-weight: bold;
   pointer-events: none;
+  filter: invert(100%);
+}
+
+.user-content {
+  background-color: #FFFFFF;
+  flex: 0 0 50%;
+  padding: 15px;
 }
 
 .user-block {

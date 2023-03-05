@@ -9,7 +9,7 @@
   --body-font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   --anchor-active-font-color: #FF0000;
   --anchor-default-font-color: #000000;
-  --product-list-background-color: hsl(0deg, 0%, 97%);
+  --app-block-background-color: hsl(0deg, 0%, 97%);
   --product-list-info-background-color: #000000;
   --product-list-info-font-color: #FFFFFF;
   --scrollbar-thumb-color: #000000;
@@ -146,14 +146,18 @@ app-product {
   width: 300px;
 }
 
+app-user {
+  column-gap: 30px;
+  flex-flow: row wrap;
+}
+
 app-user,
 app-cart,
 app-product-list,
 app-product-page {
   align-items: center;
-  background-color: var(--product-list-background-color);
+  background-color: var(--app-block-background-color);
   display: flex;
-  flex-flow: column wrap;
   flex-grow: 1;
   overflow: auto;
   padding: 30px;
@@ -164,6 +168,12 @@ app-user,
 app-product-list,
 app-product-page {
   justify-content: center;
+}
+
+app-cart,
+app-product-list,
+app-product-page {
+  flex-flow: column wrap;
 }
 
 app-footer {
