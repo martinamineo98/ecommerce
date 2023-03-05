@@ -11,10 +11,13 @@ export class UserComponent {
   currentBlock: string = ''
 
   user = {
-    firstName: 'john',
-    lastName: 'doe',
-    email: 'johndoe@email.com'
+    first_name: 'john',
+    last_name: 'doe',
+    email: 'johndoe@gmail.com',
+    birthdate: '01/01/2001'
   }
+
+  userElements: any[] = []
 
   navItems: any[] = []
   userBlocks: any[] = []
@@ -35,7 +38,8 @@ export class UserComponent {
   ]
 
   ngOnInit() {
-
+    this.currentBlock = this.nav[0].str
+    this.populateUserElements()
   }
 
   ngAfterViewInit() {
@@ -44,8 +48,6 @@ export class UserComponent {
 
     this.navItems[0].classList.add('current')
     this.userBlocks[0].classList.add('show')
-
-    this.currentBlock = this.nav[0].str
   }
 
   changeContent(i: number) {
@@ -60,6 +62,16 @@ export class UserComponent {
 
   getUserInfo() {
 
+  }
+
+  populateUserElements() {
+    for (let [k, v] of Object.entries(this.user)) {
+      this.userElements.push([k.replace('_', ' '), v])
+    }
+  }
+
+  clickEditBtn() {
+    this.changeContent(3)
   }
 
 }

@@ -39,13 +39,25 @@ h3 {
 }
 
 .user-block.show {
-  display: block;
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.user-btn-edit {
+  background-color: #000000;
+  border: 0;
+  color: #FFFFFF;
+  max-width: 200px;
+  padding: 15px;
 }
 
 .list {
   display: flex;
   flex-flow: column wrap;
+  margin-bottom: 15px;
   row-gap: 10px;
+  width: 100%;
 }
 
 .list .left {

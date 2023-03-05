@@ -4,24 +4,16 @@
 
 <div class="user-content">
   <h3>{{ currentBlock }}</h3>
-  
+
   <div class="user-block">
     <ul class="list">
-      <li>
-        <div class="left">first name</div>
-        <span class="right">{{ user.firstName }}</span>
-      </li>
-
-      <li>
-        <div class="left">last name</div>
-        <span class="right">{{ user.lastName }}</span>
-      </li>
-
-      <li>
-        <div class="left">email address</div>
-        <span class="right">{{ user.email }}</span>
+      <li *ngFor="let entry of userElements">
+        <div class="left">{{ entry[0] }}</div>
+        <span class="right">{{ entry[1] }}</span>
       </li>
     </ul>
+
+    <button class="user-btn-edit" (click)="clickEditBtn()">edit settings</button>
   </div>
 
   <div class="user-block">b</div>
