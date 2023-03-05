@@ -20,31 +20,28 @@ export class CartComponent {
 
   ngOnInit() {
     this.dataService.productsObservable.subscribe((products) => this.allProducts = products)
-    // this.retrieveProducts()
+    this.retrieveProducts()
   }
-
-  /*
 
   retrieveProducts() {
     let products = []
 
-    for (let [k, v] of Object.entries({ ... localStorage })) {
-      let [quantity, size, color] = v.split(',')
-      
-      products.push({
-        quantity: Number(quantity),
-        size: size,
-        color: color,
-        info: this.getCorrectProduct(Number(k))
-      })
+    for (let [k, v] of Object.entries(localStorage)) {
+
+      let obj = JSON.parse(v)
+          obj.product = this.getCorrectProduct(obj.id)
+          obj.identification = k
+      delete obj.id
+
+      products.push(obj)
     }
 
     this.products = products
   }
 
-  getCorrectProduct(id: any) {
+  getCorrectProduct(id: number) {
     return this.allProducts.find((product: any) => {
-      return product.id === parseFloat(id)
+      return product.id === id
     })
   }
 
@@ -52,17 +49,16 @@ export class CartComponent {
     this.dataService.setProduct(product)
   }
 
-  changeQuantity(id: any, quantity: any) {
-    let arr: any = localStorage.getItem(id)?.split(',')
-    localStorage.setItem(id, `${quantity},${arr[1]},${arr[2]}`)
-    this.retrieveProducts()
-  }
-  
-  removeProduct(id: any) {
-    localStorage.removeItem(id)
+  changeQuantity(identification: any, quantity: any) {
+    let obj = JSON.parse(localStorage.getItem(identification) || '{}')
+        obj.quantity = quantity
+    localStorage.setItem(identification, JSON.stringify(obj))
     this.retrieveProducts()
   }
 
-  */
+  removeProduct(identification: any) {
+    localStorage.removeItem(identification)
+    this.retrieveProducts()
+  }
 
 }
