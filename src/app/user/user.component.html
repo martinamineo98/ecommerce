@@ -1,7 +1,10 @@
 <nav class="user-nav">
-  <a *ngFor="let element of nav" (click)="changeContent(element.content)">{{ element.str }}</a>
+  <a *ngFor="let el of nav; let i = index" (click)="changeContent(i)">{{ el.str }}</a>
 </nav>
 
 <div class="user-content">
-  {{ content }}
+  <div class="user-block">a</div>
+  <div class="user-block">b</div>
+  <div class="user-block">c</div>
+  <div class="user-block">d</div>
 </div>

@@ -8,29 +8,38 @@ import { Component } from '@angular/core';
 
 export class UserComponent {
 
+  navItems: any[] = []
+  userBlocks: any[] = []
+
   nav: any[] = [
     {
-      str: 'account information',
-      content: 'a'
+      str: 'account information'
     },
     {
-      str: 'adress book',
-      content: 'b'
+      str: 'adress book'
     },
     {
-      str: 'orders',
-      content: 'c'
+      str: 'orders'
     },
     {
-      str: 'settings',
-      content: 'd'
+      str: 'settings'
     }
   ]
-  
-  content: any = this.nav[0].content
 
-  changeContent(content: any) {
-    this.content = content
+  ngAfterViewInit() {
+    this.navItems = Array.from(document.querySelectorAll('.user-nav a'))
+    this.userBlocks = Array.from(document.querySelectorAll('.user-block'))
+
+    this.navItems[0].classList.add('current')
+    this.userBlocks[0].classList.add('show')
+  }
+
+  changeContent(i: number) {
+    this.navItems.map((item) => item.classList.remove('current'))
+    this.navItems[i].classList.add('current')
+
+    this.userBlocks.map((item) => item.classList.remove('show'))
+    this.userBlocks[i].classList.add('show')
   }
 
 }

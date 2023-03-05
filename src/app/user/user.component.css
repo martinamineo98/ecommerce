@@ -1,0 +1,13 @@
+
+.user-nav a.current {
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.user-block {
+  display: none;
+}
+
+.user-block.show {
+  display: block;
+}
