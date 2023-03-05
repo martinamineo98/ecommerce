@@ -1,4 +1,11 @@
 
+h3 {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 100%;
+}
+
 .user-nav,
 .user-content {
   height: 100%;
@@ -23,13 +30,29 @@
 .user-content {
   background-color: #FFFFFF;
   flex: 0 0 50%;
-  padding: 15px;
 }
 
 .user-block {
   display: none;
+  padding: 15px;
+  width: 100%;
 }
 
 .user-block.show {
   display: block;
+}
+
+.list {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
+}
+
+.list .left {
+  background-color: #000000;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px;
+  width: 200px;
 }

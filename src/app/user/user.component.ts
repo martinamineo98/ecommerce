@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 
 export class UserComponent {
 
+  currentBlock: string = ''
+
+  user = {
+    firstName: 'john',
+    lastName: 'doe',
+    email: 'johndoe@email.com'
+  }
+
   navItems: any[] = []
   userBlocks: any[] = []
 
@@ -26,12 +34,18 @@ export class UserComponent {
     }
   ]
 
+  ngOnInit() {
+
+  }
+
   ngAfterViewInit() {
     this.navItems = Array.from(document.querySelectorAll('.user-nav a'))
     this.userBlocks = Array.from(document.querySelectorAll('.user-block'))
 
     this.navItems[0].classList.add('current')
     this.userBlocks[0].classList.add('show')
+
+    this.currentBlock = this.nav[0].str
   }
 
   changeContent(i: number) {
@@ -40,6 +54,12 @@ export class UserComponent {
 
     this.userBlocks.map((item) => item.classList.remove('show'))
     this.userBlocks[i].classList.add('show')
+
+    this.currentBlock = this.nav[i].str
+  }
+
+  getUserInfo() {
+
   }
 
 }

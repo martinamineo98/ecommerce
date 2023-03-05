@@ -3,7 +3,27 @@
 </nav>
 
 <div class="user-content">
-  <div class="user-block">a</div>
+  <h3>{{ currentBlock }}</h3>
+  
+  <div class="user-block">
+    <ul class="list">
+      <li>
+        <div class="left">first name</div>
+        <span class="right">{{ user.firstName }}</span>
+      </li>
+
+      <li>
+        <div class="left">last name</div>
+        <span class="right">{{ user.lastName }}</span>
+      </li>
+
+      <li>
+        <div class="left">email address</div>
+        <span class="right">{{ user.email }}</span>
+      </li>
+    </ul>
+  </div>
+
   <div class="user-block">b</div>
   <div class="user-block">c</div>
   <div class="user-block">d</div>
