@@ -27,13 +27,18 @@ export class CartComponent {
     let products = []
 
     for (let [k, v] of Object.entries(localStorage)) {
+      let obj: any
 
-      let obj = JSON.parse(v)
-          obj.product = this.getCorrectProduct(obj.id)
-          obj.identification = k
-      delete obj.id
+      // check if item is a product first
 
-      products.push(obj)
+      if (k.includes('__')) {
+        obj = JSON.parse(v)
+        obj.identification = k
+        obj.product = this.getCorrectProduct(obj.id)
+        delete obj.id
+        products.push(obj)
+      }
+
     }
 
     this.products = products
