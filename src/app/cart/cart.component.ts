@@ -13,6 +13,8 @@ export class CartComponent {
   allProducts: any
   products: any
 
+  total: number = 0
+
   constructor(
     private dataService: DataService,
     public router: Router
@@ -21,6 +23,13 @@ export class CartComponent {
   ngOnInit() {
     this.dataService.productsObservable.subscribe((products) => this.allProducts = products)
     this.retrieveProducts()
+    this.calcolateTotal()
+  }
+
+  calcolateTotal() {
+    for (let product of this.products) {
+      this.total += product.product.sale[1] === true ? product.product.priceDiscounted : product.product.price
+    }
   }
 
   retrieveProducts() {

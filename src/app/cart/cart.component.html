@@ -1,11 +1,12 @@
 <table>
   <thead>
     <tr>
-      <th>product</th>
-      <th>product name</th>
-      <th>product quantity</th>
-      <th>product color</th>
-      <th>product size</th>
+      <th></th>
+      <th>name</th>
+      <th>quantity</th>
+      <th>color</th>
+      <th>size</th>
+      <th>price</th>
       <th>remove</th>
     </tr>
   </thead>
@@ -24,7 +25,16 @@
       </th>
       <th>{{ product.color }}</th>
       <th>{{ product.size }}</th>
+      <th *ngIf="product.product.sale[0] === true">€ {{ product.product.discountedPrice }}</th>
+      <th *ngIf="product.product.sale[0] === false">€ {{ product.product.price }}</th>
       <th><button class="product-btn-remove" (click)="removeProduct(product.identification)">remove</button></th>
     </tr>
   </tbody>
+</table>
+
+<table class="cart-total"> 
+  <tr>
+    <th>total</th>
+    <th>€ {{ total }}</th>
+  </tr>
 </table>
