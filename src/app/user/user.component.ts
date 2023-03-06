@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -37,6 +38,13 @@ export class UserComponent {
     }
   ]
 
+  userForm = new FormGroup({
+    first_name: new FormControl(''),
+    last_name: new FormControl(''),
+    email: new FormControl(''),
+    birthdate: new FormControl('')
+  })
+
   ngOnInit() {
     this.currentBlock = this.nav[0].str
     this.populateUserElements()
@@ -72,6 +80,14 @@ export class UserComponent {
 
   clickEditBtn() {
     this.changeContent(3)
+  }
+
+  clickSaveBtn() {
+
+  }
+
+  addToLocalStorage(k: any, v: any) {
+    localStorage.setItem(k, v)
   }
 
 }

@@ -94,12 +94,31 @@ option {
   font: inherit;
 }
 
+input,
+select {
+  background-color: #FFFFFF;
+  border: 1px solid hsl(0deg, 0%, 95%);
+  border-radius: 5px;
+  font-family: inherit;
+}
+
 button {
+  background-color: transparent;
+  border: 0;
   transition: all .5s ease-in-out;
 }
 
 button:not(.search button):hover {
   filter: invert(100%);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
 }
 
 /* main components */
