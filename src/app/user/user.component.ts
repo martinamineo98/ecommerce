@@ -15,7 +15,12 @@ export class UserComponent {
     first_name: 'john',
     last_name: 'doe',
     email: 'johndoe@gmail.com',
-    birthdate: '01/01/2001'
+    birthdate: '01/01/2001',
+    street: 'via mario bianchi 21',
+    city: 'roma',
+    provence: 'ro',
+    zip_code: '10100',
+    country: 'italy'
   }
 
   userElements: any[] = []
@@ -26,9 +31,6 @@ export class UserComponent {
   nav: any[] = [
     {
       str: 'account information'
-    },
-    {
-      str: 'adress book'
     },
     {
       str: 'orders'
@@ -42,7 +44,12 @@ export class UserComponent {
     first_name: new FormControl(''),
     last_name: new FormControl(''),
     email: new FormControl(''),
-    birthdate: new FormControl('')
+    birthdate: new FormControl(''),
+    street: new FormControl(''),
+    city: new FormControl(''),
+    provence: new FormControl(''),
+    zip_code: new FormControl(''),
+    country: new FormControl('')
   })
 
   ngOnInit() {
@@ -88,7 +95,7 @@ export class UserComponent {
   }
 
   clickEditBtn() {
-    this.changeContent(3)
+    this.changeContent(2)
   }
 
   clickSaveBtn() {
