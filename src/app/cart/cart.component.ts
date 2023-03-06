@@ -28,7 +28,7 @@ export class CartComponent {
 
   calcolateTotal() {
     for (let product of this.products) {
-      this.total += product.product.sale[1] === true ? product.product.priceDiscounted : product.product.price
+      this.total += product.product.sale[0] === true ? product.product.priceDiscounted : product.product.price
     }
   }
 

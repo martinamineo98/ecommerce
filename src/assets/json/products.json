@@ -38,7 +38,7 @@
     "categories": [2],
     "colors": [0, 2],
     "sizes": [0],
-    "quantity": 0,
+    "quantity": 5,
     "image": "/assets/img/bottle.jpg",
     "all_images": ["/assets/img/bottle.jpg", "/assets/img/bottle_grey.jpg"],
     "sale": [true, 25],
