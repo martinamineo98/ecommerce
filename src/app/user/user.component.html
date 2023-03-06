@@ -23,7 +23,7 @@
     <form class="user-settings" id="user-settings" [formGroup]="userForm">
       <fieldset *ngFor="let entry of userElements">
         <label class="left">{{ entry[0] }}</label>
-        <input class="right" type="text" placeholder="{{ entry[1] }}" formControlName="{{ entry[0] }}">
+        <input class="right" type="text" placeholder="{{ entry[1] }}" formControlName="{{ entry[0].replace(' ', '_') }}">
       </fieldset>
     </form>
 

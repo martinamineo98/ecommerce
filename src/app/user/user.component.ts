@@ -68,13 +68,22 @@ export class UserComponent {
     this.currentBlock = this.nav[i].str
   }
 
-  getUserInfo() {
+  populateUserElements() {
+    this.getUserInfo()
 
+    for (let [index, [k, v]] of Object.entries(Object.entries(this.user))) {
+      if ( this.userElements.length < Object.entries(this.user).length ) {
+        this.userElements.push([k.replace('_', ' '), v])
+      } else {
+        this.userElements[parseFloat(index)][1] = v
+      }
+    }
   }
 
-  populateUserElements() {
-    for (let [k, v] of Object.entries(this.user)) {
-      this.userElements.push([k.replace('_', ' '), v])
+  getUserInfo() {      
+    for (let [index, [k, v]] of Object.entries(Object.entries(this.user))) {
+      let str = localStorage.hasOwnProperty(k) ? localStorage.getItem(k) : v
+      this.user[k as keyof typeof this.user] = str || this.user[k as keyof typeof this.user]
     }
   }
 
@@ -83,11 +92,17 @@ export class UserComponent {
   }
 
   clickSaveBtn() {
+    let inputs = Array.from(document.querySelectorAll('.user-settings input'))
 
-  }
+    for (let [index, [k, v]] of Object.entries(Object.entries(this.userForm.value))) {
+      let placeholder = inputs[parseFloat(index)].getAttribute('placeholder')
+      let str = v === '' ? placeholder : v
 
-  addToLocalStorage(k: any, v: any) {
-    localStorage.setItem(k, v)
+      localStorage.setItem(k, str || '')
+    }
+
+    this.populateUserElements()
+    this.changeContent(0)
   }
 
 }

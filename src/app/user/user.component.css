@@ -13,7 +13,7 @@ h3 {
 
 .user-nav {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
 }
 
 .user-nav a {
@@ -41,7 +41,7 @@ h3 {
 .user-block.show {
   align-items: center;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
 }
 
 .user-btn-save,
@@ -55,7 +55,7 @@ h3 {
 
 .user-settings {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   margin-bottom: 15px;
   row-gap: 10px;
   width: 100%;
@@ -63,7 +63,7 @@ h3 {
 
 .list {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   margin-bottom: 15px;
   row-gap: 10px;
   width: 100%;
