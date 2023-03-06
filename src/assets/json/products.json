@@ -10,7 +10,9 @@
     "sizes": [1, 2, 3, 4, 5],
     "quantity": 15,
     "image": "/assets/img/short-sleeved-tshirt.jpg",
-    "all_images": ["/assets/img/short-sleeved-tshirt.jpg", "/assets/img/short-sleeved-tshirt_white.jpg", "/assets/img/short-sleeved-tshirt_grey.jpg"]
+    "all_images": ["/assets/img/short-sleeved-tshirt.jpg", "/assets/img/short-sleeved-tshirt_white.jpg", "/assets/img/short-sleeved-tshirt_grey.jpg"],
+    "sale": [false, 25],
+    "priceDiscounted": 0
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "sizes": [1, 2, 3, 4, 5],
     "quantity": 0,
     "image": "/assets/img/long-sleeved-tshirt.jpg",
-    "all_images": ["/assets/img/long-sleeved-tshirt.jpg", "/assets/img/long-sleeved-tshirt_white.jpg", "/assets/img/long-sleeved-tshirt_grey.jpg"]
+    "all_images": ["/assets/img/long-sleeved-tshirt.jpg", "/assets/img/long-sleeved-tshirt_white.jpg", "/assets/img/long-sleeved-tshirt_grey.jpg"],
+    "sale": [true, 25],
+    "priceDiscounted": 0
   },
   {
     "id": 3,
@@ -36,6 +40,8 @@
     "sizes": [0],
     "quantity": 0,
     "image": "/assets/img/bottle.jpg",
-    "all_images": ["/assets/img/bottle.jpg", "/assets/img/bottle_grey.jpg"]
+    "all_images": ["/assets/img/bottle.jpg", "/assets/img/bottle_grey.jpg"],
+    "sale": [true, 25],
+    "priceDiscounted": 0
   }
 ]

@@ -2,7 +2,8 @@
 
 <div class="product-info-main">
   <img src="{{ product.image }}" alt="{{ product.name }}">
-  <span class="product-price">€ {{ product.price }}</span>
+  <span class="product-price" *ngIf="product.sale[0] === false">€ {{ product.price }}</span>
+  <span class="product-price" *ngIf="product.sale[0] === true">€ <s>{{ product.price }}</s> {{ product.priceDiscounted }}</span>
   <span class="product-status" *ngIf="product.quantity === 0">sold out</span>
 </div>
 

@@ -17,7 +17,9 @@ interface Product {
   sizes: any[],
   quantity: number,
   image: string,
-  all_images: any[]
+  all_images: any[],
+  sale: any[],
+  priceDiscounted: number
 }
 
 @Component({
@@ -40,11 +42,23 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
+    this.addPriceReal()
     this.setProducts(this.products)
     this.setCategories(this.categories)
     this.setBrands(this.brands)
     this.setColors(this.colors)
     this.setSizes(this.sizes)
+  }
+
+  addPriceReal() {
+    for (let product of this.products) {
+      product.priceDiscounted = this.getCorrectPrice(product.price, product.sale[1])
+      console.log(product.priceDiscounted)
+    }
+  }
+
+  getCorrectPrice(price: number, percentage: number) {
+    return price - ( (price / 100) * percentage )
   }
 
   setProducts(a: any) {
