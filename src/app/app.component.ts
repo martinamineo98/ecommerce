@@ -53,7 +53,6 @@ export class AppComponent {
   addPriceReal() {
     for (let product of this.products) {
       product.priceDiscounted = this.getCorrectPrice(product.price, product.sale[1])
-      console.log(product.priceDiscounted)
     }
   }
 

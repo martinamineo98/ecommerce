@@ -27,6 +27,8 @@ export class CartComponent {
   }
 
   calcolateTotal() {
+    this.total = 0
+    
     for (let product of this.products) {
       this.total += product.product.sale[0] === true ? product.product.priceDiscounted : product.product.price
     }
@@ -73,6 +75,7 @@ export class CartComponent {
   removeProduct(identification: any) {
     localStorage.removeItem(identification)
     this.retrieveProducts()
+    this.calcolateTotal()
   }
 
 }
